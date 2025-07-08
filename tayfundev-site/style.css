@@ -1,0 +1,154 @@
+:root {
+  --bg1: #0f1c2e;
+  --bg2: #000000;
+  --text: #ffffff;
+  --accent: #4a90e2;
+}
+
+body.light {
+  --bg1: #dbeaff;
+  --bg2: #5b9bd5;
+  --text: #111;
+  --accent: #1e3f66;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  transition: all 0.6s ease;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes gradientShift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+header {
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  transition: 0.4s ease;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+nav a, nav button {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+nav button img {
+  width: 24px;
+  transition: transform 0.6s ease;
+}
+
+body.light #modeIcon {
+  transform: rotate(360deg);
+}
+
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.buttons a {
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 10px 5px 0;
+  color: var(--text);
+  background: var(--accent);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+form input, form textarea {
+  padding: 10px;
+  width: 80%;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background: #ffffff15;
+  color: var(--text);
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.85rem;
+}
